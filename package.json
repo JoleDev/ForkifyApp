@@ -1,0 +1,15 @@
+{
+  "name": "forkifyapp",
+  "version": "1.0.0",
+  "description": "Forkify Project for Online Recipe Manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Janith Olagama",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.26.1"
+  },
+  "dependencies": {}
+}
