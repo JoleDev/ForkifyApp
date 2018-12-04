@@ -5,6 +5,7 @@ export default class Search {
     constructor (query) {
         this.query = query;
     }
+    //No punctuations here, after the curly brace above
     //We can put ";" semi colon here, but it will ignored by the compiler
     //But if we put "," here, it will trow an error/
 
@@ -13,7 +14,7 @@ export default class Search {
         try {
             const recipeSearch = await axios(`https://www.food2fork.com/api/search?key=${key}&q= ${this.query}`);
             this.recipe = recipeSearch.data.recipes;
-            console.log(this.recipe);
+            //console.log(this.recipe);
         } catch (error) {
             console.log (error);
         }
