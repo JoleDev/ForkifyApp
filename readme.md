@@ -18,7 +18,7 @@
 ##### 3. Add event listener to take the input from search field
     * "submit" event added with a callback function to control the search
 
-##### 4. controlSearch call back function for above event listner
+##### 4. controlSearch () call back function for above event listner
     * Get the query from the view
     * Create new search object and added to state object
     * Prepare UI for results
