@@ -5,6 +5,17 @@ import {
 export const getInput = () => elements.searchInput.value;
 //In Arrow function, if there is only one line of code, No need to specify return key word, it will be implicitly return.
 
+//Clear input field
+//Since we are not returning anything from this function it is cleaner to rap this code within parantheses
+export const clearInput = () => {
+    elements.searchInput.value = "";
+}
+
+//Clear the recipe list element, Otherwise, new search results will be added to existing list of elements
+export const clearRecipeList = () => {
+    elements.recipeHtmlList.innerHTML = "";
+};
+
 //We define a function, which insert the HTML markup for each recipe result.
 const insertHtml = recipe => {
     const htmlMarkup = `

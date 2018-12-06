@@ -19,8 +19,10 @@ const controlSearch = async () => {
     if (query) {
         //2. Create new search object and added to state object
         state.search = new Search (query);
-        
+
         //3. Prepare UI for results
+        searchView.clearInput ();
+        searchView.clearRecipeList ();
 
         //4. Search for results
         //We have to wait before we render the results ion the UI, hence we have to make below function wait
