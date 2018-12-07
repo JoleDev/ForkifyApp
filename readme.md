@@ -34,3 +34,10 @@
         * Create the HTML markup (list) and pass recipe object results - Recipe ID, Recipe Title, Recipe Publisher, Recipe Image
         * insert the HTML markup to DOM, using insertAdjacentHTML
     * forEach function was define to loop through the recipes Array and add above html list markup for each recipe result.
+
+##### 7. Clear input field and recipe list
+    * Clear search input field once user press the search button
+    * Clear the existing list of recipes from the view
+
+#### 8. Concatenate the title
+    * Concatenate the title, If the title is too long for one line

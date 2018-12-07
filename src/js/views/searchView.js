@@ -16,6 +16,21 @@ export const clearRecipeList = () => {
     elements.recipeHtmlList.innerHTML = "";
 };
 
+//Concatenate the title, If the title is too long for one line
+const limitTitleLength = (title, limit = 17) => {
+    const newTitle =  [];
+    if (title.length > limit) {
+        title.split (" ").reduce ((acc, ele) => {
+            if (acc + ele.length <= limit) {
+                newTitle.push (ele);
+            }
+            return acc + ele.length;
+        },0);
+        return `${newTitle.join (" ")} ...`;
+    };
+    return title
+};
+
 //We define a function, which insert the HTML markup for each recipe result.
 const insertHtml = recipe => {
     const htmlMarkup = `
@@ -25,7 +40,7 @@ const insertHtml = recipe => {
                 <img src="${recipe.image_url}" alt="Test">
             </figure>
             <div class="results__data">
-                <h4 class="results__name">${recipe.title}</h4>
+                <h4 class="results__name">${limitTitleLength (recipe.title)}</h4>
                 <p class="results__author">${recipe.publisher}/p>
             </div>
         </a>
