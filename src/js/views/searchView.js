@@ -49,9 +49,8 @@ const insertHtml = recipe => {
     elements.recipeHtmlList.insertAdjacentHTML ("beforeend", htmlMarkup);
 }
 
-
-//This function will recipe the recipies array and will loop through it
-//This function will call insertHtml () which insert HTML mark up on each element
+//This function will recieve the recipies array and will loop through it
+//This function will call insertHtml () which insert the HTML mark up on each element
 export const renderRecipes = recipe => {
     recipe.forEach(insertHtml);
 }
