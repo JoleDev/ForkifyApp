@@ -42,6 +42,14 @@ elements.searchForm.addEventListener ("submit", e => {
     controlSearch ();
 });
 
+elements.searchRecPages.addEventListener ("click", ele => {
+    const btn = ele.target.closest (".btn-inline");
+    if (btn) {
+        const goToPage = parseInt(btn.dataset.goto, 10);
+        searchView.clearRecipeList ();
+        searchView.renderRecipes(state.search.recipe, goToPage)
+    }
+});
 
 
 
