@@ -1,6 +1,7 @@
 // Global app controller
 import Search from "./model/Search";
 import * as searchView from "./views/searchView";
+import * as recipeView from "./views/recipeView";
 import Recipe from "./model/Recipe";
 import {
     elements,
@@ -73,6 +74,7 @@ const controlRecipe = async () => {
 
     if (id) {
         //2. Prepare UI for changes
+        renderLoader (elements.recipe);
 
         //3. Create new recipe object
         state.recipe = new Recipe(id);
@@ -90,7 +92,10 @@ const controlRecipe = async () => {
             state.recipe.calcServings();
 
             //6. Render the recipe
-            console.log(state);
+            recipeView.clearRecipe ();
+            clearLoader ();
+            recipeView.renderRecipe (state.recipe);
+
         } catch (error) {
             console.log(error)
         };

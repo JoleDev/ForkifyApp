@@ -17,6 +17,8 @@ export const clearRecipeList = () => {
     elements.searchRecPages.innerHTML = "";
 };
 
+//Hightlight the Selected Recipe
+
 //Concatenate the title, If the title is too long for one line
 const limitTitleLength = (title, limit = 17) => {
     const newTitle =  [];
