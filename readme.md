@@ -57,3 +57,13 @@
 
     * Add pagination function to show ten results at a time
     * Add buttons dynamically to navigate between recipe results
+
+##### 11. Building the recipe model
+
+    * Define the recipe class data model
+    * Add ajax function to get recipe from API
+    * Define calculate time and no of servings methods
+
+##### 12. Building the recipe model - Part 2
+
+    * Develop the parseIngredients () to parse the ingredients string and take quantity, unit and ingredients separatly into three different variables and store it in a single object.
